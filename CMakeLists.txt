@@ -16,7 +16,8 @@ qt_standard_project_setup(REQUIRES 6.5)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
- 
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
 # Ajouter les sous-répertoires
 add_subdirectory(app)
 add_subdirectory(gTests)

@@ -1,17 +1,16 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.18)
 project(gTests)
 
 # GoogleTest requires at least C++14
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 enable_testing()
 
 find_package(Qt6 6.5 REQUIRED COMPONENTS
     Core
 )
-
-find_package(Python3)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -27,10 +26,6 @@ set(SOURCES
     testclass2test.cpp
 )
 
-# set(HEADERS
-#     test.h
-# )
-
 set(QT_LIB
     Qt6::Core
     Qt6::Quick
@@ -42,7 +37,6 @@ set(QT_LIB
 add_executable(gTests
     ${SOURCES}
     main.cpp
-    # ${HEADERS}
 )
 
 add_test(NAME gTests COMMAND gTests --gtest_color=yes)
@@ -55,4 +49,6 @@ target_link_libraries(gTests PRIVATE
 )
 
 include(GoogleTest)
-gtest_discover_tests(gTests DISCOVERY_MODE PRE_TEST)
+gtest_discover_tests(gTests
+    DISCOVERY_MODE PRE_TEST
+)
