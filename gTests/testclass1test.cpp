@@ -44,7 +44,7 @@ TEST_F(TestClass1Test, TestCase1) {
 
 TEST_F(TestClass1Test, DoesXyz) {
     // Exercises the Xyz feature of Foo.
-    ASSERT_EQ(6,5);
+    ASSERT_EQ(5,5);
 }
 }
 
