@@ -39,12 +39,12 @@ TEST_F(TestClass1Test, TestCase1) {
     TestClass1 *class1 = new TestClass1();
     int value = 4;
     class1->doSomething(value);
-    ASSERT_EQ(value, class1->getValue());
+    ASSERT_EQ(value+1, class1->getValue());
 }
 
 TEST_F(TestClass1Test, DoesXyz) {
     // Exercises the Xyz feature of Foo.
-    ASSERT_EQ(5,5);
+    ASSERT_EQ(6,5);
 }
 }
 

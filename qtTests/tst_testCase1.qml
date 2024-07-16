@@ -5,6 +5,6 @@ TestCase {
     name: "testCase"
 
     function test_math() {
-        compare(2+2, 4, "2+2=4")
+        compare(2+3, 4, "2+2=4")
     }
 }

@@ -15,7 +15,7 @@ void tst_testClass1::test_case1() {
     TestClass1 *class1 = new TestClass1();
     int value = 4;
     class1->doSomething(value);
-    QCOMPARE(value, class1->getValue());
+    QCOMPARE(value+1, class1->getValue());
 }
 
 #include "tst_testclass1.moc"

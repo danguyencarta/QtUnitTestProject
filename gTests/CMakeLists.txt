@@ -31,7 +31,6 @@ set(QT_LIB
     Qt6::Quick
     Qt6::Gui
     Qt6::Widgets
-    Qt6::Qml
 )
 
 add_executable(gTests
@@ -43,7 +42,7 @@ add_test(NAME gTests COMMAND gTests --gtest_color=yes)
 
 target_link_libraries(gTests PRIVATE
     TestAppLib
-    TestAppLibplugin
+    #TestAppLibplugin
     GTest::gtest_main
     Qt6::Core
 )
